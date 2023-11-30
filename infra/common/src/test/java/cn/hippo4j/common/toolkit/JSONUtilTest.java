@@ -18,6 +18,7 @@
 package cn.hippo4j.common.toolkit;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -83,6 +84,7 @@ public class JSONUtilTest {
     @AllArgsConstructor
     @NoArgsConstructor
     @Data
+    @JsonPropertyOrder({"id", "name", "foo"})
     private static class Foo {
 
         private Integer id;
